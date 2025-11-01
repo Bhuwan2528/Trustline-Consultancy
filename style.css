@@ -311,7 +311,7 @@ body {
 }
 
 @media (max-width: 900px) {
-  .about-row {
+  .about-row, .about-row.reverse {
     flex-direction: column;
     text-align: center;
   }

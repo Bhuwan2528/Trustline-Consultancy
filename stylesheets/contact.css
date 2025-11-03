@@ -1,0 +1,197 @@
+:root {
+  --tl-navy: #0A1F44;
+  --tl-gold: #C9A94B;
+  --tl-muted: #6b7280;
+  --tl-soft: #f6f7fb;
+  --tl-card-bg: #ffffff;
+  --tl-radius: 12px;
+  --tl-max-width: 1150px;
+}
+
+/* ---------- Banner ---------- */
+.tl-contact-banner {
+  position: relative;
+  margin-top: 90px;
+  height: 60vh;
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.tl-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.5));
+}
+
+.tl-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.tl-banner-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 10px;
+}
+
+.tl-banner-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Info Row ---------- */
+.tl-contact-info {
+  background: var(--tl-soft);
+  padding: 60px 20px;
+}
+
+.tl-info-container {
+  max-width: var(--tl-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.tl-info-box {
+  background: var(--tl-card-bg);
+  border-radius: var(--tl-radius);
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tl-info-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.tl-info-box h3 {
+  color: var(--tl-navy);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.tl-info-box p {
+  color: var(--tl-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Contact Section ---------- */
+.tl-contact-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.tl-contact-container {
+  max-width: var(--tl-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.tl-contact-image {
+  flex: 1 1 45%;
+}
+
+.tl-contact-image img {
+  width: 100%;
+  height: 550px;
+  border-radius: var(--tl-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: tlFadeInLeft 1s ease forwards;
+}
+
+.tl-contact-form {
+  flex: 1 1 45%;
+  animation: tlFadeInRight 1s ease forwards;
+}
+
+.tl-contact-form h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--tl-navy);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tl-contact-form p {
+  color: var(--tl-muted);
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.tl-form-group {
+  margin-bottom: 15px;
+}
+
+.tl-form-group input,
+.tl-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--tl-radius);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.tl-form-group input:focus,
+.tl-form-group textarea:focus {
+  border-color: var(--tl-gold);
+}
+
+.tl-btn-primary {
+  background: linear-gradient(90deg, var(--tl-gold), #b89b3e);
+  color: var(--tl-navy);
+  border: none;
+  padding: 12px 30px;
+  border-radius: var(--tl-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tl-btn-primary:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ---------- Animations ---------- */
+@keyframes tlFadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tlFadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .tl-info-box { flex: 1 1 45%; }
+}
+
+@media (max-width: 768px) {
+  .tl-info-container { flex-direction: column; align-items: center; }
+  .tl-contact-container { flex-direction: column; text-align: center; }
+  .tl-contact-image, .tl-contact-form { flex-basis: 100%; }
+}
+
+@media (max-width: 480px) {
+  .tl-contact-section { padding: 60px 15px; }
+  .tl-form-group input, .tl-form-group textarea { font-size: 0.95rem; }
+}

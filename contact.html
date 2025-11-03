@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trustline Consultancy - Contact Us</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="stylesheets/contact.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <img src="assets/logo.webp" alt="Trustline Consultancy" class="logo" />
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav-links">
+        <div class="close-btn" id="closeSidebar">&times;</div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html">Consulting</a>
+            <a href="services.html">Financial Advisory</a>
+            <a href="services.html">Tax Planning</a>
+          </div>
+        </div>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+918607086844" class="mobile-call-btn" style="color: #eee;">+91 86070 86844</a>
+      </nav>
+
+
+      <!-- Desktop CTA -->
+      <a href="tel:+918607086844" class="contact-cta desktop-cta">+91 86070 86844</a>
+    </div>
+  </header>
+
+  <!-- ====== Banner Section ====== -->
+  <section class="tl-contact-banner">
+    <div class="tl-banner-overlay"></div>
+    <div class="tl-banner-content">
+      <h1>Contact Us</h1>
+      <p>We’re Here to Help You Anytime</p>
+    </div>
+  </section>
+
+  <!-- ====== Info Row ====== -->
+  <section class="tl-contact-info">
+    <div class="tl-info-container">
+      <div class="tl-info-box">
+        <h3>📍 Our Location</h3>
+        <p>Trustline Consultancy Pvt. Ltd.<br> 45 Business Park, Connaught Place, New Delhi</p>
+      </div>
+      <div class="tl-info-box">
+        <h3>⏰ Working Hours</h3>
+        <p>Monday - Saturday: 9:00 AM to 7:00 PM<br>Sunday: Closed</p>
+      </div>
+      <div class="tl-info-box">
+        <h3>📞 Get in Touch</h3>
+        <p>+91 9876543210<br>info@trustlineconsultancy.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Contact Form Section ====== -->
+  <section class="tl-contact-section">
+    <div class="tl-contact-container">
+      <div class="tl-contact-image">
+        <img src="data:image/jpeg;base64,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" alt="Contact Office" />
+      </div>
+
+      <div class="tl-contact-form">
+        <h2>Send Us a Message</h2>
+        <p>Have a question or want to discuss your project? Fill out the form below and we’ll get back to you soon.</p>
+
+        <form>
+          <div class="tl-form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="tl-form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="tl-form-group">
+            <input type="text" placeholder="Subject" required />
+          </div>
+          <div class="tl-form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="tl-btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section class="subscribe-section">
+    <h2 class="subscribe-title">SUBSCRIBE</h2>
+    <p class="subscribe-text">
+      Get 10% off your first purchase when you sign up for our newsletter!
+    </p>
+    <form class="subscribe-form" onsubmit="return false;">
+      <input type="email" placeholder="Email" required>
+      <button type="submit" class="btn secondary">SIGN UP</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Trustline</h3>
+      <p>Trustline Consultant, Agro Mall, Delhi Road, Sector 14, Rohtak, Haryana.</p>
+      <a href="tel:+918607086844" class="phone">+918607086844</a>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 Trustline - All Rights Reserved.</p>
+      <div class="powered">
+        <p>Powered by</p>
+        <img src="https://img.icons8.com/?size=48&id=13772&format=png" alt="GoDaddy Logo">
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

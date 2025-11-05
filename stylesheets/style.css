@@ -621,6 +621,72 @@ body {
   font-size: 0.95rem;
 }
 
+/* Existing service styles remain unchanged */
+
+/* --- Action Buttons Below Each Card --- */
+.service-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Call Button */
+.call-btn {
+  background-color: var(--navy, #0a1f44);
+  color: #fff;
+  border: 1px solid var(--navy, #0a1f44);
+}
+.call-btn:hover {
+  background-color: #003a8b;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background-color: #069c3d;
+  color: #fff;
+  border: 1px solid #1ebe5d;
+}
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* Icons Styling */
+.btn i {
+  font-size: 1rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .service-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+
 /* ---------- WHY CHOOSE US ---------- */
 .why-choose-us {
   background: var(--soft);
@@ -965,17 +1031,25 @@ body {
 .footer {
   background: linear-gradient(180deg, #07132a 0%, #0a1f44 100%);
   color: #fff;
-  padding: 60px 8% 30px;
+  padding: 80px 8% 30px;
   font-family: 'Inter', sans-serif;
   text-align: center;
 }
 
+/* FLEXBOX VERSION */
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   gap: 40px;
   margin-bottom: 30px;
-  /* text-align: left; */
+}
+
+/* Each section will auto-size similar to grid columns */
+.footer-section {
+  flex: 1 1 260px;
+  max-width: 350px;
 }
 
 .footer-section h3,
@@ -1055,15 +1129,25 @@ body {
   object-fit: contain;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .footer-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
+
+  .footer-section {
+    max-width: 100%;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
+    text-align: center;
   }
 }
+
 
 /* ---------- CONTACT SECTION ---------- */
 .contact-section {
